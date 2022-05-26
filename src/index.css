@@ -311,7 +311,7 @@ aside .updates a:hover {
   border-radius: var(--card-border-radius);
   color: var(--color-white);
   height: 16rem;
-  min-width: 24rem;
+  min-width: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -429,6 +429,81 @@ aside .updates a:hover {
   margin-top: 2rem;
   border-radius: var(--car);
   padding: var(--card-padding);
+}
+
+.right .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--card-padding);
+}
+.right .header a {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+}
+.right .investiments {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+}
+.right .investiments .investiment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--card-padding);
+  border-bottom: 1px solid var(--color-light);
+  transition: all 300ms ease;
+  cursor: default;
+}
+.right .investiments .investiment:hover {
+  background: var(--color-light);
+}
+.right .investiments .investiment img {
+  width: 2.4rem;
+}
+.right .transactions .transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  transition: all 300ms ease;
+}
+.right .transactions .transaction:hover {
+  background: var(--color-white);
+}
+.right .transactions .transaction .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.right .transactions .transaction .icon {
+  background: var(--color-purple-light);
+  padding: 8px;
+  border-radius: var(--border-radius-2);
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right .transactions .transaction .icon span {
+  color: var(--color-purple);
+}
+.right .transactions .transaction .brandCard {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.right .transactions .transaction .brandCard h4 {
+  padding: 12px;
+  background: var(--color-danger);
+  border-radius: var(--border-radius-2);
+  color: var(--color-white);
+  font-weight: bold;
+}
+.right .transactions .transaction .val p {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
 /*# sourceMappingURL=index.css.map */
