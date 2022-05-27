@@ -21,6 +21,13 @@
   --border-radius-2: 6px;
 }
 
+.dark-theme {
+  --color-white: #131316;
+  --color-light: #23232a;
+  --color-dark: #ddd;
+  --color-gray-dark: #adacb5;
+}
+
 *,
 *::before,
 *::after {
@@ -504,6 +511,82 @@ aside .updates a:hover {
 .right .transactions .transaction .val p {
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  nav .search-bar {
+    display: none;
+  }
+  nav .profile-area {
+    gap: 2rem;
+  }
+  nav .profile-area button#menu-btn {
+    display: inline;
+    background: transparent;
+    color: var(--color-dark);
+    cursor: pointer;
+  }
+
+  main {
+    grid-template-columns: 1fr;
+  }
+  main aside {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 3;
+    background: var(--color-white);
+    width: 22rem;
+    height: 100vh;
+    box-shadow: 2rem 0 2rem var(--color-primary-light);
+    gap: 0;
+    animation: showSidebar 500ms ease forwards;
+  }
+  main aside button#close-btn {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 4;
+    background: transparent;
+    color: var(--color-dark);
+    cursor: pointer;
+  }
+  main aside .sidebar {
+    margin-top: 4rem;
+  }
+  main aside .updates {
+    display: none;
+  }
+  main .middle .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  main canvas {
+    margin: 3rem 0 1rem;
+  }
+  main .right .transactions {
+    margin-top: 5rem;
+  }
+
+  @keyframes showSidebar {
+    to {
+      left: 0;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  nav .profile-area {
+    gap: 2.6rem;
+  }
+  nav .profile-area h5 {
+    display: none;
+  }
+
+  .middle .cards {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

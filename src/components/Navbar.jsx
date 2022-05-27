@@ -1,7 +1,7 @@
 import Logo from '/images/logo.png';
 import profile1 from '/images/profile-1.jpg';
 
-export const Navbar = () => {
+export const Navbar = ({activeAside, activeTheme, applyDarkTheme}) => {
     return (
         <nav>
             <div className="container">
@@ -18,11 +18,11 @@ export const Navbar = () => {
                 </div>
 
                 <div className="profile-area">
-                    <div className="theme-btn">
-                        <span className="material-symbols-sharp active">
+                    <div className="theme-btn" onClick={activeTheme}>
+                        <span className={`material-symbols-sharp ${!applyDarkTheme ? 'active' : ''}`}>
                             light_mode
                         </span>
-                        <span className="material-symbols-sharp">
+                        <span className={`material-symbols-sharp ${applyDarkTheme ? 'active' : ''}`}>
                             dark_mode
                         </span>
                     </div>
@@ -39,7 +39,7 @@ export const Navbar = () => {
                         </span>
                     </div>
 
-                    <button id='menu-btn'>
+                    <button id='menu-btn' onClick={activeAside}>
                         <span className="material-symbols-sharp">
                             menu
                         </span>

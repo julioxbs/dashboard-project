@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 const items = [
     {
         title: 'Dashboard',
@@ -34,10 +36,12 @@ const items = [
     },
 ]
 
-export const Aside = () => {
+export const Aside = ({asideBtn}) => {
+    const [closeBtn, setCloseBtn] = useState(true);
+
     return (
-        <aside>
-            <button id="close-btn">
+        <aside style={closeBtn || asideBtn ? {display: 'block'} : {display: 'none'}}>
+            <button id="close-btn" onClick={() => setCloseBtn(!closeBtn)}>
                 <span className="material-symbols-sharp">
                     close
                 </span>
